@@ -1,8 +1,8 @@
 describe('Модуль Регистрация',  () => {
         it( 'Модуль Регистрация', () => {
                 cy.visit('https://dev.profteam.su/registration')
-                cy.get('input[autocomplete="username"]').type ('asd');
-                cy.get('input[type="email"]').type ('asdas.tarpedkina05@mail.ru');
+                cy.get('input[autocomplete="username"]').type ('qwe');
+                cy.get('input[type="email"]').type ('qwer.tarpedkina05@mail.ru');
                 cy.get('input[type="password"]').first().type ('Password1');
                 cy.get('input[type="password"]').eq(1).type ('Password1');
                 cy.get('div.registration-form__button').contains('Далее').should ('be.visible')
@@ -20,7 +20,7 @@ describe('Модуль Регистрация',  () => {
 
         it( 'Некорректная почта (негативный) Модуль регистрация', () => {
                 cy.visit('https://dev.profteam.su/registration')
-                cy.get('input[autocomplete="username"]').type('lbabababa')
+                cy.get('input[autocomplete="username"]').type('tyuj')
                 cy.get('input[type="email"]').type('email-for-negative-test');
                 cy.get('input[type="password"]').first().type('Password1');
                 cy.get('input[type="password"]').eq(1).type('Password1');
@@ -29,8 +29,8 @@ describe('Модуль Регистрация',  () => {
 
         it('Heкopрeктный логин (негативный) Модуль регистрация', () => {
                 cy.visit('https://dev.profteam.su/registration')
-                cy.get('input[autocomplete="username"]').type('loba@1+');
-                cy.get('input[type="email"]').type('laba@mail.ru');
+                cy.get('input[autocomplete="username"]').type('mfgbnj@1+');
+                cy.get('input[type="email"]').type('mkkfvmjfgn@mail.ru');
                 cy.get('input[type="password"]').first().type('Password1');
                 cy.get('input[type="password"]').eq(1).type('Password1');
                 cy.get('div.registration-form__button').contains('Далее').click( {force: true});
@@ -38,8 +38,8 @@ describe('Модуль Регистрация',  () => {
 
         it('Слишком простой пароль (негативный) Модуль регистрация', () => {
                 cy.visit('https://dev.profteam.su/registration')
-                cy.get('input[autocomplete="username"]').type('urtyu');
-                cy.get('input[type="email"]').type('asdf@mail.ru');
+                cy.get('input[autocomplete="username"]').type('pfglmb');
+                cy.get('input[type="email"]').type('dgbttgbh@mail.ru');
                 cy.get('input[type="password"]').first().type('123');
                 cy.get('input[type="password"]').eq(1).type('123');
                 cy.get('div.registration-form__button').contains('Далее').click({force: true} )
@@ -48,8 +48,8 @@ describe('Модуль Регистрация',  () => {
 
         it('Несовпадение паролей (негативный) Модуль регистрация', () => {
                 cy.visit('https://dev.profteam.su/registration')
-                cy.get('input[autocomplete="username"]').type('baafasdfe');
-                cy.get('input[type="email"]').type('ethdgbfx@mail.ru');
+                cy.get('input[autocomplete="username"]').type('bcfjvnrvbth');
+                cy.get('input[type="email"]').type('iruyijh@mail.ru');
                 cy.get('input[type="password"]').first().type('Password')
                 cy.get('input[type="password"]').eq(1).type('dge53');
                 cy.get('div.registration-form__button').contains('Далее').should('be.visible')
@@ -58,8 +58,8 @@ describe('Модуль Регистрация',  () => {
 
         it('Латиница в полях ввода персональных данных (негативный) Модуль регистрация', () => {
                 cy.visit('https://dev.profteam.su/registration')
-                cy.get('input[autocomplete="username"]').type('asdqwe');
-                cy.get('input[type="email"]').type('adfzxcv@mail.ru');
+                cy.get('input[autocomplete="username"]').type('peortuijh');
+                cy.get('input[type="email"]').type('bvfdreh@mail.ru');
                 cy.get('input[type="password"]').first().type( 'Password1');
                 cy.get('input[type="password"]').eq(1).type('Password1');
                 cy.get('div.registration-form__button').contains('Далее').should('be.visible')
