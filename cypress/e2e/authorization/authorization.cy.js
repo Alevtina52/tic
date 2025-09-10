@@ -13,8 +13,8 @@ describe('Модуль Авторизация', () => {
     });
     it('Неверный логин или пароль (негативный) модуль авторизации', () => {
         cy.visit('https://dev.profteam.su/login');
-        cy.get('input[autocomplete="username"]').type('shieroe1');
-        cy.get('input[type="password"]').type('fddssR214');
+        cy.get('input[autocomplete="username"]').type('qwe');
+        cy.get('input[type="password"]').type('rdcgQ23');
         cy.get('div.login-form__button').should('contain', 'Войти')
             .and('not.have.css', 'display', 'none').click();
     });
